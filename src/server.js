@@ -13,6 +13,10 @@ app.disable('etag');
 
 app.use('/todos', routes());
 
+app.get('/ping', (req, res) => {
+  res.send('pong');
+});
+
 const errorHandler = new ErrorHandler();
 
 // validation errors are not typed correctly - changing here
